@@ -10,6 +10,7 @@
 #include "clsTransactionsScreen.h"
 #include "clsManageUsersScreen.h"
 #include "clsLoginRegisterScreen.h"
+#include "clsCurrencyExchangeMainScreen.h"
 #include "Global.h"
 #include <iomanip>
 
@@ -20,7 +21,7 @@ private:
 	enum enMainMenueOption{
 		eListClient=1, eAddNewClient=2, eDeleteClient=3,
 		eUpdateClient=4, aFindClient=5, eShowTransactionsMenue = 6,
-		eManageUsers = 7, eLoginRegisterScreen=8, eExit = 9
+		eManageUsers = 7, eLoginRegisterScreen=8, eCurrencyExchange=9,eExit = 10
 	};
 
 	static short _ReadMainMenueOption()
@@ -89,6 +90,11 @@ private:
         clsUser CurrentUser = clsUser::Find("", "");
     }
 
+    static void _ShowCurrencyExchangeScreen()
+    {
+        clsCurrencyExchangeMainScreen::ShowCurrenciesMenue();
+    }
+
     static void PerfromMainMenueOption(enMainMenueOption MainMenueOption)
     {
         switch (MainMenueOption)
@@ -149,6 +155,13 @@ private:
             _GoBackToMainMenue();
             break;
         }
+        case enMainMenueOption::eCurrencyExchange:
+        {
+            system("cls");
+            _ShowCurrencyExchangeScreen();
+            _GoBackToMainMenue();
+            break;
+        }
         case enMainMenueOption::eExit:
         {
             system("cls");
@@ -176,7 +189,8 @@ private:
             cout << setw(37) << left << "" << "\t[6] Transactions.\n";
             cout << setw(37) << left << "" << "\t[7] Manage Users.\n";
             cout << setw(37) << left << "" << "\t[8] Login Register.\n";
-            cout << setw(37) << left << "" << "\t[9] Logout.\n";
+            cout << setw(37) << left << "" << "\t[9] Currency Exchange.\n";
+            cout << setw(37) << left << "" << "\t[10] Logout.\n";
             cout << setw(37) << left << "" << "===========================================\n";
 
             PerfromMainMenueOption((enMainMenueOption)_ReadMainMenueOption());
