@@ -11,7 +11,21 @@ A comprehensive console-based Bank Management System built using C++ and Object-
 * Currency Exchange: Handle currency data and exchange operations.
 * Data Persistence: Save and retrieve all project data using local text files.
 
----
+------
+
+## 🛠️ Technologies & Concepts
+
+- C++
+- Object-Oriented Programming (OOP)
+- File Handling
+- Structures & Enumerations
+- Vectors
+- Functions & Modular Programming
+- Data Validation
+- CRUD Operations
+- User Authentication & Permissions
+
+  
 
 # 🏦 نظام إدارة البنك (بلغة C++)
 
@@ -19,7 +33,7 @@ A comprehensive console-based Bank Management System built using C++ and Object-
 
 ---
 
-## 🚀 ماذا يفعل المشروع؟ (بالعربية)
+## 🚀 ماذا يفعل المشروع؟ 
 * إدارة العملاء: إضافة، تعديل، حذف، بحث، وعرض حسابات العملاء.
 * الحركات المالية: إيداع، سحب، وعرض إجمالي الأرصدة.
 * إدارة المستخدمين والصلاحيات: التحكم بمستخدمي النظام وتحديد صلاحيات كل مستخدم.
